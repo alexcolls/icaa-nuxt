@@ -33,12 +33,8 @@
         </a>
       </li>
     </ul>
-    <div class="p-2">
-      <CommonButtonColorMode />
-    </div>
   </div>
 </template>
-
 
 <script setup lang="ts">
 const isDark = useIsDark();

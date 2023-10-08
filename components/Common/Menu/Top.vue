@@ -11,7 +11,10 @@
           alt="ICAA"
         >
       </div>
-      <nav class="pr-12">
+      <nav class="pr-12 flex flex-wrap">
+        <div class="mt-3 mr-4">
+          <CommonButtonColorMode />
+        </div>
         <div class="p-2">
           <UAvatar
             src="https://avatars.githubusercontent.com/u/739984?v=4"
@@ -31,9 +34,4 @@ import logo from "~/assets/img/logo-icaa.png";
 
 const isDark = useIsDark();
 
-// const links = ref<Array<{ text: string; href: string }>>([
-//   { text: 'Home', href: '/' },
-//   { text: 'About', href: '/about' },
-//   { text: 'Contact', href: '/contact' },
-// ]);
 </script>

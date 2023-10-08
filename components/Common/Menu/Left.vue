@@ -1,7 +1,10 @@
 <template>
   <div
-    :class="{ 'w-48': isExpanded }"
-    class="h-screen flex flex-col w-16 bg-gray-800 transition-all duration-300"
+    :class="[{ 'w-44': isExpanded }, 
+             isDark ? 'shadow-zinc-800 bg-zinc-900' : 
+             'shadow-zinc-200 bg-zinc-100']"
+    class="h-screen flex flex-col w-16 transition-all duration-300 absolute
+     z-50 shadow-md"
     @mouseover="expandMenu"
     @mouseleave="collapseMenu"
   >
@@ -9,44 +12,54 @@
       <li
         v-for="item in menuItems"
         :key="item.icon"
-        class="p-4 hover:bg-gray-700"
       >
-        <i
-          :class="item.icon"
-          class="text-white"
-        />
-        <span
-          v-if="isExpanded"
-          class="ml-4 text-white"
-        >{{ item.name }}</span>
+        <a
+          :href="item.link"
+          class="flex items-center p-4 relative"
+          :class="isDark ? 'hover:bg-zinc-800' : 'hover:bg-zinc-200'"
+        >
+          <div class="py-3">
+            <UIcon
+              :name="item.icon"
+              class="h-6 w-6 absolute left-5 top-1/2 transform -translate-y-1/2"
+            />
+          </div>
+          <span
+            v-if="isExpanded"
+            class="ml-12"
+          >
+            {{ item.name }}
+          </span>
+        </a>
       </li>
-      <CommonColorModeButton />
     </ul>
-  </div>
-
-  <div class="bg-transparent">
-    Hello 2
+    <div class="p-2">
+      <CommonButtonColorMode />
+    </div>
   </div>
 </template>
 
+
 <script setup lang="ts">
+const isDark = useIsDark();
 const isExpanded = ref(false);
+
 const menuItems = [
-  { icon: "fas fa-home", name: "Home" },
-  { icon: "fas fa-user", name: "Profile" },
-  { icon: "fas fa-cog", name: "Settings" },
-  // Add more menu items as needed
+  { icon: "i-heroicons-home", name: "Home", link: "/" },
+  { icon: "i-heroicons-user", name: "Usuarios", link: "users"},
+  { icon: "i-heroicons-cog-6-tooth", name: "Ajustes", link: "settings" },
 ];
 
+let timeout: ReturnType<typeof setTimeout>;
+
 const expandMenu = () => {
+  clearTimeout(timeout);
   isExpanded.value = true;
 };
 
 const collapseMenu = () => {
-  isExpanded.value = false;
+  timeout = setTimeout(() => {
+    isExpanded.value = false;
+  }, 300);
 };
 </script>
-
-<style scoped>
-/* Add any additional styles or tailwind utilities here */
-</style>

@@ -1,0 +1,124 @@
+{
+  "common": {
+    "accept": "Aceptar",
+    "back": "Volver",
+    "add": "Añadir",
+    "addRecord": "Añadir registro",
+    "alert": "Alerta",
+    "cancel": "Cancelar",
+    "close": "Cerrar",
+    "confirm": "Confirmar",
+    "confirmRemoveRecords": "¿Seguro que deseas eliminar los registros seleccionados?<p>Esta acción no se podrá revertir.</p>",
+    "create": "Crear",
+    "createCopy": "Crear copia",
+    "currentValue": "Valor actual",
+    "darkTheme": "Tema oscuro",
+    "date": "Fecha",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "errors": "Errores",
+    "exportToExcel": "Exportar a excel",
+    "formulations": "Formulaciones",
+    "goHome": "Ir a inicio",
+    "group": "Grupo",
+    "hideAll": "Ocultar todo",
+    "id": "Id",
+    "loading": "Cargando...",
+    "name": "Nombre",
+    "navigationMenu": "Menu",
+    "ok": "Ok",
+    "orders": "Pedidos",
+    "percentage": "Porcentaje",
+    "persistedValue": "Valor persistido",
+    "planning": "Plan",
+    "primaryKeyAlert_one": "No se permiten valores repetidos para el campo. {{fields}}",
+    "primaryKeyAlert_other": "No se permiten valores repetidos para los campos.<br/>{{fields}}",
+    "products": "Productos",
+    "refresh": "Actualizar",
+    "removeRecords": "Eliminar registros seleccionados",
+    "save": "Guardar",
+    "scope": "Scope",
+    "send": "Enviar",
+    "slackDemand": "Pedidos sin solución",
+    "total": "Total",
+    "unsavedChanges": "<b>¿Seguro que deseas continuar?</b> <p>Hay cambios sin guardar, si aceptas los cambios se perderán.</p>",
+    "unsupportedFile": "Fichero no soportad",
+    "uploadFile": "Subir fichero",
+    "active": "Activo",
+    "inactive": "Inactivo",
+    "activate": "Activar",
+    "deactivate": "Desactivar"
+  },
+  "header": {
+    "logout": "Cerrar sesión",
+    "title": "ICAA",
+    "menu": {
+      "userManagement": "Usuarios y Permisos"
+    }
+  },
+  "footer": {
+    "copyRight": "© Ministerio de Cultura y Deporte - Gobierno de España"
+  },
+  "grid": {
+    "userManagement": {
+      "NomUsuario": "Nombre",
+      "MailUser": "Email",
+      "GrupoId": "Grupo",
+      "AltaUsuario": "Fecha de alta",
+      "ModifUsuario": "Modificación",
+      "ModifFecha": "Actualizado",
+      "BbdddId": "BBDD Id",
+      "UsuarioBbdd": "Usuario BBDD",
+      "Dni": "DNI",
+      "Activo": "Activo",
+      "MultiLogin": "MultiLogin"
+    }
+  },
+  "componentOrigin": {
+    "Eu": "EU",
+    "NoEu": "No EU"
+  },
+  "format": {
+    "bytes": "{{data, 0,0[.]00b}}",
+    "currency": "{{data, 0,0[.]00$}}",
+    "date": "{{data, DD/MM/YY}}",
+    "dateTime": "{{data, DD/MM/YY - HH:mm}}",
+    "decimal": "{{data, 0,0.00}}",
+    "decimalPercentage": "{{data, 0,0.00}}%",
+    "number": "{{data, 0,0[.]00}}",
+    "percentage": "{{data, 0,0[.][00]}}%"
+  },
+  "message": {
+    "duplicate": "El nombre introducido ya existe",
+    "pkViolation": "Revisa los valores introducidos, no se permiten valores repetidos de algunos campos.",
+    "requiredValues": "Debes introducir valor en todos los campos obligatorios",
+    "success": "Proceso realizado correctamente",
+    "unexpectedError": "Error inesperado"
+  },
+  "page": {
+    "home": "Inicio",
+    "userManagement": "Gestión de usuarios"
+  },
+  "role": {
+    "Admin": "Administrador",
+    "Manager": "Gestor",
+    "None": "Usuario sin acceso"
+  },
+  "serverError": {
+    "UnexpectedErrorException": "Error inesperado"
+  },
+  "userManagement": {
+    "confirmRemove": "¿Estás seguro de que deseas eliminar el usuario?",
+    "confirmActivate": "¿Estás seguro de que deseas activar el usuario?",
+    "confirmDeactivate": "¿Estás seguro de que deseas desactivar el usuario?",
+    "edit": "Editar usuario",
+    "new": "Añadir usuario",
+    "userData": "Datos de usuario",
+    "groups": "Grupos"
+  },
+  "validation": {
+    "email": "Email no válido",
+    "required": "Campo requerido",
+    "dni": "Dni no válido"
+  }
+}

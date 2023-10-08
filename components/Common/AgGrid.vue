@@ -1,13 +1,18 @@
 <template>
-  <ag-grid-vue class="ag-theme-alpine w-full h-screen" :default-col-def="defaultColDef" :dom-layout="'autoHeight'"
-    :row-model-type="'infinite'" :pagination-page-size="100" :cache-block-size="100" :datasource="dataSource" />
+  <ag-grid-vue
+    class="ag-theme-alpine w-full h-screen"
+    :default-col-def="defaultColDef"
+    :dom-layout="'autoHeight'"
+    :row-model-type="'infinite'"
+    :pagination-page-size="100"
+    :cache-block-size="100"
+    :datasource="dataSource"
+  />
 </template>
-
 <script setup lang="ts">
 import "ag-grid-community/styles/ag-grid.css";
 import "ag-grid-community/styles/ag-theme-alpine.css";
 import { AgGridVue } from "ag-grid-vue3";
-import { ref } from "vue";
 
 const api = "users";
 
@@ -46,6 +51,5 @@ const dataSource = {
   },
 };
 
-// Row data (initially empty, will be filled by the data source)
 const rowData = ref([]);
 </script>

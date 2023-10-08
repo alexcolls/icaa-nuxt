@@ -1,14 +1,3 @@
-<script setup>
-const colorMode = useColorMode();
-const isDark = computed({
-  get() {
-    return colorMode.value === "dark";
-  },
-  set() {
-    colorMode.preference = colorMode.value === "dark" ? "light" : "dark";
-  },
-});
-</script>
 <template>
   <ClientOnly>
     <UButton
@@ -23,3 +12,15 @@ const isDark = computed({
     </template>
   </ClientOnly>
 </template>
+
+<script setup>
+const colorMode = useColorMode();
+const isDark = computed({
+  get() {
+    return colorMode.value === "dark";
+  },
+  set() {
+    colorMode.preference = colorMode.value === "dark" ? "light" : "dark";
+  },
+});
+</script>

@@ -5,7 +5,7 @@
       'bg-zinc-100 shadow-zinc-200'"
   >
     <div class=" mx-auto flex justify-between items-center">
-      <div class="w-14 max-w-10 p-2">
+      <div class="w-14 max-w-10 p-1 ml-1">
         <img
           :src="logo"
           alt="ICAA"
